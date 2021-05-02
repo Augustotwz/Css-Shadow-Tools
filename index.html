@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Css Tools</title>
+	</head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+
+	<body onload="getValuesBox()">
+		<header>
+			<div id="header">
+				<h1>CSS Shadow</h1>
+				<a href="https://augustotwz.github.io/Css-Tools/">
+					<i class="fab fa-github" style="font-size: 38px;"></i> 
+				</a>
+			</div>
+		</header>
+
+		<div id="container">
+			<section><!-- Box Shadow section -->
+				<div id="left-box">
+					<div id="main-box"><p id="code"></p></div>
+				</div>
+
+				<div id="rigth-box">
+					<div class="box-config">
+						<label for="horizontal">Horizontal Length</label>
+						<div id="valorHorizontal"></div>
+						<input id="horizontal" onchange="getValuesBox()" type="range" min="-200" max="200" value="25">
+					</div>
+					<div class="box-config">
+						<label for="vertical">Vertical Length</label>
+						<div id="valorVertical"></div>
+						<input id="vertical" onchange="getValuesBox()" type="range" min="-200" max="200" value="35">
+					</div>
+					<div class="box-config">
+						<label for="blur-radius">Blur radius</label>
+						<div id="value-blur-radius"></div>
+						<input id="blur-radius" onchange="getValuesBox()" type="range" min="0" max="200" value="3">
+					</div>
+					<div class="box-config">
+						<label for="spread-radius">Spread radius</label>
+						<div id="value-spread-radius"></div>
+						<input id="spread-radius" onchange="getValuesBox()" type="range" min="-149" max="200" value="2">
+					</div>
+					<div class="btn-box">
+						<button onclick="copy('copyCodeBox')">COPY CODE</button>
+						<input type="text" id="copyCodeBox" />
+					</div>
+				</div>
+			</section>
+
+			<hr style="margin-top: 100px; margin-bottom: 20px;" />
+
+			<section><!-- Text Shadow section -->
+				<div id="left-box">
+					<div id="main-text">
+						<p id="text">TEXT SHADOW DECORATION</p>
+					</div>
+				</div>
+
+				<div id="rigth-box">
+					<div class="box-config">
+						<label for="horizontalText">Horizontal Length</label>
+						<div id="valorHorizontalText"></div>
+						<input id="horizontalText" onchange="getValuesText()"
+						 type="range" min="-200" max="200" value="3">
+					</div>
+					<div class="box-config">
+						<label for="verticalText">Vertical Length</label>
+						<div id="valorVerticalText"></div>
+						<input id="verticalText" onchange="getValuesText()" 
+						type="range" min="-100" max="100" value="2">
+					</div>
+					<div class="box-config">
+						<label for="blur-radiusText">Blur radius</label>
+						<div id="value-blur-radiusText"></div>
+						<input id="blur-radiusText" onchange="getValuesText()" 
+						type="range" min="0" max="95" value="3">
+					</div>
+					<div class="btn-box">
+						<button onclick="copy('copyCodeText')">COPY CODE</button>
+						<input type="text" id="copyCodeText" />
+					</div>		
+				</div>
+			</section>
+
+		</div><!-- Fim Container -->
+
+		<script src="app.js"></script>
+	</body>
+</html>
